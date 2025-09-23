@@ -1,7 +1,7 @@
 # Reverse Engineering Whoop 4.0
 
 The **Whoop 4.0** is a fitness band that requires a subscription to use.  
-This project explores ways to utilize the device **without a subscription** by analyzing packet data, reverse-engineering the checksum, and experimenting with Bluetooth communication.
+This project is just my documentation of reverse engineering it and working on an actual mobile app.
 
 ---
 
