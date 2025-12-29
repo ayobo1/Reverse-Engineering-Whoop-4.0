@@ -9,17 +9,19 @@ This project is just my documentation of reverse engineering it and working on a
 
 ### Whoop Timer Data
 ```
-Header       Packet Count   Device #   Unix Timestamp (Hex LE)   Checksum
-aa10005723   1c             4201       004a2f68                  00000000edfb6182   # 12:00 PM
-aa10005723   1b             4201       a0f52e68                  000000000ee5761c   #  6:00 AM
-aa10005723   1a             4201       349d2f68                  00000000e2513705   #  5:55 PM
-aa10005723   19             4201       74f42e68                  000000009d2f3a60   #  5:55 AM
-aa10005723   18             4201       88c12f68                  0000000008a87738   #  8:30 PM
-aa10005723   17             4201       c8182f68                  00000000b5d849bc   #  8:30 AM
-aa10005723   16             4201       70ac2f68                  00000000d4a1eeac   #  7:00 PM
-aa10005723   15             4201       b0032f68                  00000000652349fe   #  7:00 AM
-aa10005723   14             4201       e02d2f68                  00000000a24d63f5   # 10:00 AM
+Header       Packet Count   Device #   Unix Timestamp (Hex LE)   4 blank bytes   Checksum
+aa10005723   1c             4201       004a2f68                  00000000        edfb6182   # 12:00 PM
+aa10005723   1b             4201       a0f52e68                  00000000        0ee5761c   #  6:00 AM
+aa10005723   1a             4201       349d2f68                  00000000        e2513705   #  5:55 PM
+aa10005723   19             4201       74f42e68                  00000000        9d2f3a60   #  5:55 AM
+aa10005723   18             4201       88c12f68                  00000000        08a87738   #  8:30 PM
+aa10005723   17             4201       c8182f68                  00000000        b5d849bc   #  8:30 AM
+aa10005723   16             4201       70ac2f68                  00000000        d4a1eeac   #  7:00 PM
+aa10005723   15             4201       b0032f68                  00000000        652349fe   #  7:00 AM
+aa10005723   14             4201       e02d2f68                  00000000        a24d63f5   # 10:00 AM
 ```
+I am unsure what the 4 blank bytes are for. I think that they are a placeholder for the checksum when sent however I will need to do more testing to check my hypothesis. 
+
 
 ### Misc Packets
 ```
