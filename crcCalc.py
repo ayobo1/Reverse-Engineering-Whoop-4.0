@@ -12,3 +12,7 @@ def get_crc(hexString):
     x = WhoopCRC.calc(hexString)
     y = struct.pack("<I", x)    # Little endian
     return y
+
+#this is the propreitary checksum for the whoop 4.0.
+#input any 16 byte hex string in the format documented to get the checksum
+#it should be header, PC, device#, unix timestamp little endian, then 4 blank bytes
