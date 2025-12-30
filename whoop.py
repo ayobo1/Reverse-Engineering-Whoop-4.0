@@ -17,7 +17,7 @@ def set_time(year, month, day, hour, minute):
     return payload + crc
 
 
-data1 = bytes.fromhex("aa10005723004201" + "402e756700000000")
+data1 = bytes.fromhex("aa10005723704201696d657400000000")   #test for 
 data2 = set_time(2025, 1, 1, 12, 0)
 data1c = crcCalc.get_crc(data1)
 
